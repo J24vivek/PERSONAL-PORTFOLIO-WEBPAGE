@@ -4,6 +4,9 @@ document.addEventListener("DOMContentLoaded", function () {
     var navList = document.querySelector("nav .nav-list ul");
     var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var body = document.body;
+    var certificateModal = document.getElementById("certificate-modal");
+    var certificateModalImage = document.getElementById("certificate-modal-image");
+    var certificateModalTitle = document.getElementById("certificate-modal-title");
 
     if (menuBtn && navList) {
         menuBtn.addEventListener("click", function () {
@@ -56,6 +59,49 @@ document.addEventListener("DOMContentLoaded", function () {
             body.classList.add("home-intro-start");
         });
     }
+
+    function closeCertificateModal() {
+        if (!certificateModal) {
+            return;
+        }
+
+        certificateModal.classList.remove("is-open");
+        certificateModal.setAttribute("aria-hidden", "true");
+        if (body) {
+            body.style.overflow = "";
+        }
+    }
+
+    document.querySelectorAll(".certificate-trigger").forEach(function (button) {
+        button.addEventListener("click", function () {
+            if (!certificateModal || !certificateModalImage || !certificateModalTitle) {
+                return;
+            }
+
+            var imagePath = this.getAttribute("data-image");
+            var title = this.getAttribute("data-title") || "Certificate Preview";
+
+            certificateModalImage.src = imagePath;
+            certificateModalImage.alt = title;
+            certificateModalTitle.textContent = title;
+            certificateModal.classList.add("is-open");
+            certificateModal.setAttribute("aria-hidden", "false");
+
+            if (body) {
+                body.style.overflow = "hidden";
+            }
+        });
+    });
+
+    document.querySelectorAll("[data-close-certificate]").forEach(function (element) {
+        element.addEventListener("click", closeCertificateModal);
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+            closeCertificateModal();
+        }
+    });
 
     var revealGroups = [
         { selector: "section:not(#home)", variant: "" },

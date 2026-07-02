@@ -27,11 +27,11 @@
             <ul>
                 <i id="menu-close" class="fa-solid fa-xmark"></i>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Me</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#skill-badges">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
         <i id="menu-btn" class="fa-solid fa-bars"></i>
@@ -81,12 +81,12 @@
                         <p>CKT Vidyalaya, Panvel</p>
                     </div>
                     <div class="edu-card">
-                        <h4>11-12th</h4>
-                        <p>Fergusson College, Pune</p>
+                        <h4>11-12th (PCM)</h4>
+                        <p>Fergusson College, Pune </p>
                     </div>
                     <div class="edu-card">
                         <h4>Engineering (CS)</h4>
-                        <p>PES Modern College, Pune</p>
+                        <p>PES Modern College of Engineering, Pune</p>
                     </div>
                 </div>
             </div>
@@ -145,6 +145,38 @@
                 </div>
             </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <h1>Certifications</h1>
+                <p>Click certificate name to view the certificate.</p>
+            </div>
+            <div class="certification-list">
+                <button type="button" class="certificate-trigger" data-image="AICTE Gen_AI Intern.png" data-title="AICTE Gen AI Internship Certificate">
+                    AICTE Gen AI Internship Certificate
+                </button>
+                <button type="button" class="certificate-trigger" data-image="Codtech intern.png" data-title="Codtech Internship Certificate">
+                    Codtech Internship Certificate
+                </button>
+                <button type="button" class="certificate-trigger" data-image="Prodigy Intern.png" data-title="Prodigy Infotech Internship Certificate">
+                    Prodigy Infotech Internship Certificate
+                </button>
+                <button type="button" class="certificate-trigger" data-image="Udemy WEB_D.png" data-title="Udemy Web Development Certificate">
+                    Udemy Web Development Certificate
+                </button>
+                <button type="button" class="certificate-trigger" data-image="WEB_Certificate.png" data-title="Web Development Certificate">
+                    Web Development Certificate
+                </button>
+                <button type="button" class="certificate-trigger" data-image="Figma.png" data-title="Figma Certificate">
+                    Figma Certificate
+                </button>
+                <button type="button" class="certificate-trigger" data-image="PYC.jpg" data-title="Python Certificate">
+                    Python Certificate
+                </button>
             </div>
         </div>
     </section>
@@ -331,6 +363,17 @@
     </section>
 
 
+
+    <div id="certificate-modal" class="certificate-modal" aria-hidden="true">
+        <div class="certificate-modal-backdrop" data-close-certificate></div>
+        <div class="certificate-modal-content" role="dialog" aria-modal="true" aria-labelledby="certificate-modal-title">
+            <button type="button" class="certificate-modal-close" aria-label="Close certificate preview" data-close-certificate>
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h3 id="certificate-modal-title">Certificate Preview</h3>
+            <img id="certificate-modal-image" src="" alt="Certificate preview">
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>
