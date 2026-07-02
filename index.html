@@ -28,7 +28,7 @@
                 <i id="menu-close" class="fa-solid fa-xmark"></i>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#skill-badges">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact Me</a></li>
@@ -56,7 +56,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="VIVEKP.jpg" alt="Vivek Jagtap">
+                    <img src="Vivek.png" alt="Vivek Jagtap">
                 </div>
             </div>
         </div>
@@ -72,8 +72,8 @@
                 <h1>About Me</h1>
             </div>
                     <h3>Vivek Uttamkumar Jagtap</h3>
-                    <p class="dob">DOB: 24-10-2004 (20 Years)</p>
-                    <p class="bio">Beyond academics, I am committed to continuous improvement, aiming to contribute to impactful projects. Currently, I am focusing on areas like Full Stack Web Development, software development, C++, Data Structures and Algorithms. My curiosity extends to exploring emerging technologies such as AI, machine learning, and cloud computing, which I believe are shaping the future of the tech industry.</p>
+                    <p class="dob">Computer Science Engineering Student | Full Stack Web Developer</p>
+                    <p class="bio">I am a Computer Science Engineering student with a strong interest in full stack web development and software engineering. I enjoy building responsive and user-focused web applications, learning modern technologies, and strengthening my problem-solving ability through data structures and algorithms. Along with frontend and backend development, I continuously explore areas such as software design, cloud technologies, and emerging innovations to grow as a well-rounded developer.</p>
                 </div>
                 <div class="education-cards">
                     <div class="edu-card">
@@ -93,50 +93,57 @@
         </div>
     </section>
 
-    <section id="skills" class="skills">
+    <section id="skill-badges" class="skill-badges">
         <div class="container">
-            <div class="section-header">
-                <h1>Skills</h1>
+            <div class="skill-badges-layout">
+                <div class="skill-badges-image">
+                    <img src="skills.png" alt="Skills illustration">
+                </div>
+                <div class="skill-badges-content">
+            <div class="badge-section">
+                <h3>--- Languages</h3>
+                <div class="badges-container">
+                    <span class="badge java"><i class="fab fa-java"></i> JAVA</span>
+                    <span class="badge javascript"><i class="fab fa-js"></i> JAVASCRIPT</span>
+                    <span class="badge typescript"><i class="fas fa-file-code"></i> TYPESCRIPT</span>
+                    <span class="badge sql"><i class="fas fa-database"></i> SQL</span>
+                </div>
             </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h4>Frontend Development</h4>
-                    <div class="skill-tags">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Tailwind CSS</span>
-                        <span>React.js</span>
-                        <span>Redux Toolkit</span>
-                    </div>
+            <div class="badge-section">
+                <h3>--- Frontend</h3>
+                <div class="badges-container">
+                    <span class="badge html"><i class="fab fa-html5"></i> HTML</span>
+                    <span class="badge css"><i class="fab fa-css3-alt"></i> CSS</span>
+                    <span class="badge react"><i class="fab fa-react"></i> REACT</span>
+                    <span class="badge redux"><i class="fab fa-react"></i> REDUX TOOLKIT</span>
+                    <span class="badge tailwind"><i class="fas fa-wind"></i> TAILWIND CSS</span>
+                    <span class="badge vite"><i class="fas fa-bolt"></i> VITE</span>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h4>Backend - Database</h4>
-                    <div class="skill-tags">
-                        <span>Node.js</span>
-                        <span>Express.js</span>
-                        <span>MongoDB</span>
-                        <span>MySQL</span>
-                    </div>
+            </div>
+            <div class="badge-section">
+                <h3>--- Backend & APIs</h3>
+                <div class="badges-container">
+                    <span class="badge node"><i class="fab fa-node-js"></i> NODE.JS</span>
+                    <span class="badge express"><i class="fab fa-node-js"></i> EXPRESS.JS</span>
+                    <span class="badge socket"><i class="fas fa-power-off"></i> SOCKET.IO</span>
+                    <span class="badge spring"><i class="fab fa-java"></i> SPRING BOOT</span>
                 </div>
-                
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h4>JAVA - DSA</h4>
-                    <div class="skill-tags">
-                        <span>Arrays</span>
-                        <span>Linked Lists</span>
-                        <span>Stacks</span>
-                        <span>Trees</span>
-                    </div>
+            </div>
+            <div class="badge-section">
+                <h3>--- Databases</h3>
+                <div class="badges-container">
+                    <span class="badge mongodb"><i class="fas fa-leaf"></i> MONGODB</span>
+                    <span class="badge mysql"><i class="fas fa-database"></i> MYSQL</span>
+                </div>
+            </div>
+            <div class="badge-section">
+                <h3>--- Dev Tools & Infrastructure</h3>
+                <div class="badges-container">
+                    <span class="badge git"><i class="fab fa-git-alt"></i> GIT</span>
+                    <span class="badge github"><i class="fab fa-github"></i> GITHUB</span>
+                    <span class="badge postman"><i class="fas fa-paper-plane"></i> POSTMAN</span>
+                </div>
+            </div>
                 </div>
             </div>
         </div>
@@ -325,26 +332,7 @@
 
 
 
-    <script>
-        $('#menu-btn').click(function () {
-            $('nav .nav-list ul').addClass('active');
-        });
-        $('#menu-close').click(function () {
-            $('nav .nav-list ul').removeClass('active');
-        });
-
-        $(document).ready(function() {
-            $('a[href^="#"]').on('click', function(event) {
-                event.preventDefault();
-                var target = $(this.getAttribute('href'));
-                if (target.length) {
-                    target.stop().animate({
-                        scrollTop: target.offset().top - 80
-                    }, 800);
-                }
-            });
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 
 </html>
